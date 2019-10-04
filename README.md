@@ -16,7 +16,7 @@ This project is built with Angular for a Responsive frontend, Firebase Cloud Fun
 - Creating and injecting different Services for Database interaction, Authentication or Subscription
 - Using multiple techniques to achieve communication between components, such as EventEmitter, Service, Subscription
 - Building RESTful API from scratch using firebase cloud function & Express.js
-- Consuming [Unsplash]('https://unsplash.com/') API to get random pictures
+- Consuming [Unsplash](https://unsplash.com/) API to get random pictures
 - Using service worker to cache files & images
 - Writing custom class to structure data and pass data around
 - Reflecting different authentication state in UI and providing relevant functionalities
