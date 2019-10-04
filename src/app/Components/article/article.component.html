@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="content">
+    <div class="image" #image></div>
+
+    <div class="body" *ngIf="post">
+      <div class="header">
+        <h1 class="title">{{ post?.title }}</h1>
+        <p>
+          By {{ post?.author }} / <span>{{ post?.category }}</span> /
+          {{ formateDate(post?.date._seconds) }}
+        </p>
+      </div>
+
+      <div class="text">
+        <p>{{ post?.body }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer-section></app-footer-section>

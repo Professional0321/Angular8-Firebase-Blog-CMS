@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700|Source+Serif+Pro:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Source Serif Pro', serif;
+
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+.modal-open {
+  overflow-y: hidden;
+}

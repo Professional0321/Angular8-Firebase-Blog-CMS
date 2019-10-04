@@ -1,0 +1,18 @@
+<div class="container" id="{{ post.id }}" (click)="onClick($event)">
+  <div class="content">
+    <img class="image" src="{{ post.image }}" alt="image" />
+    <div class="text">
+      <h1 class="title">{{ post.title }}</h1>
+      <p class="body">
+        {{ truncate(post.body, 300) }}
+      </p>
+
+      <p class="desc">
+        <span>{{ post.category }}</span> / {{ formateDate(post.date._seconds) }}
+      </p>
+
+      <a class="edit" *ngIf="isAuthenticated && owned">Edit</a>
+      <a class="delete" *ngIf="isAuthenticated && owned">Delete</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="articles">
+    <app-listview-item
+      *ngFor="let item of posts"
+      [post]="item"
+      (itemToRemove)="removeItemById($event)"
+    ></app-listview-item>
+  </div>
+</div>
+<app-footer-section></app-footer-section>

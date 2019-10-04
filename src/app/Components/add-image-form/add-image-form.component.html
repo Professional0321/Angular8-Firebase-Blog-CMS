@@ -1,0 +1,21 @@
+<div class="container" (click)="onClick($event)">
+  <div class="content">
+    <form class="signup-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <h4>Add Image</h4>
+        <p class="close" (click)="onClick($event)">X</p>
+        <input
+          type="text"
+          placeholder="Enter an image Url"
+          name="imageUrl"
+          #url
+          [ngModel]
+          required
+        />
+
+        <button (click)="randomize()">Add Random Image</button>
+        <button type="submit" [disabled]="!form.valid">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+$height-container: 635px;
+$darken: 75%;
+
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$color-to-blend: rgba(0, 0, 0, 0.3);
+$color-to-blend-brighten: rgba(0, 0, 0, 0);
+
+$font-size-title: 1.2rem;
+$font-size-para: 1rem;
+
+// * {
+//   min-width: 300px;
+// }
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
+
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
+  .content {
+    // border: 1px solid crimson;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .thumbnail {
+      //   border: 1px solid darkviolet;
+      width: 100%;
+      height: 300px;
+      // background-image: url("../../../assets/sven-scheuermeier-VNseEaTt9w4.jpg");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+    }
+
+    .text {
+      margin: 20px;
+      position: absolute;
+      bottom: 0;
+      padding-top: 50px;
+
+      .title {
+        font-family: $font-title;
+        font-size: $font-size-title;
+        height: 70px;
+      }
+
+      .body {
+        font-family: $font-desc;
+        font-size: $font-size-para;
+        margin-top: 40px;
+        height: 100px;
+      }
+
+      .desc {
+        font-family: $font-para;
+        text-transform: uppercase;
+        font-size: $font-size-para * 0.8;
+        margin-top: 30px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="container" (click)="onClick($event)">
+  <div class="content">
+    <div class="thumbnail" #thumbnail></div>
+
+    <div class="text">
+      <h4 class="title">{{ post.title }}</h4>
+      <p class="body">
+        {{ truncateIftoolong(post.body, 180) }}
+      </p>
+      <p class="desc">
+        <span>{{ post.category }}</span> / {{ formateDate(post.date._seconds) }}
+      </p>
+    </div>
+  </div>
+</div>

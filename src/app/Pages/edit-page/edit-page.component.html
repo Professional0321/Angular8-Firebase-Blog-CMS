@@ -1,0 +1,45 @@
+<app-navbar (shouldPublish)="publish($event)"></app-navbar>
+<app-add-image-form
+  (dismiss)="closeModal($event)"
+  (imageUrl)="setImage($event)"
+  *ngIf="showModal"
+></app-add-image-form>
+<div class="container">
+  <div class="content">
+    <!-- image section -->
+    <div class="image" (click)="addCoverImage($event)" #image>
+      <h2>Add Cover Image</h2>
+    </div>
+    <!-- text editing section -->
+    <div class="text">
+      <form class="article" #form>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="title"
+          placeholder="Title"
+          required
+        />
+        <input
+          type="text"
+          name="category"
+          id="category"
+          class="category"
+          placeholder="Category"
+          required
+        />
+        <textarea
+          name="body"
+          id="body"
+          cols="30"
+          rows="35"
+          placeholder="Write your post here"
+          required
+        ></textarea>
+      </form>
+    </div>
+  </div>
+</div>
+
+<app-footer-section></app-footer-section>

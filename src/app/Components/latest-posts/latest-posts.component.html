@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="content">
+    <div class="header">
+      <h3>The Latest on Wanderer</h3>
+      <a [routerLink]="['/posts']">Show All</a>
+    </div>
+
+    <div class="items">
+      <app-post-grid-item
+        *ngFor="let post of posts"
+        [post]="post"
+      ></app-post-grid-item>
+    </div>
+  </div>
+</div>

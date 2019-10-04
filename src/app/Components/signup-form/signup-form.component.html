@@ -1,0 +1,29 @@
+<div class="container" (click)="onClick($event)">
+  <div class="content">
+    <form
+      class="signup-form"
+      #authForm="ngForm"
+      (ngSubmit)="onSubmit(authForm)"
+    >
+      <div class="form-group">
+        <h4>Sign Up</h4>
+        <p class="close" (click)="onClick($event)">X</p>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          name="signup-email"
+          [ngModel]
+          required
+        />
+        <input
+          type="password"
+          placeholder="Choose your password"
+          name="signup-password"
+          [ngModel]
+          required
+        />
+        <button type="submit" [disabled]="!authForm.valid">Sign up</button>
+      </div>
+    </form>
+  </div>
+</div>

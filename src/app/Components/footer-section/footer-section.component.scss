@@ -1,0 +1,80 @@
+// * ----- basic layout -----
+
+.container {
+  height: 350px;
+  //   border: 1px solid blue;
+  color: white;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    // border: 1px solid coral;
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    position: relative;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    .logo {
+      margin-top: 60px;
+      margin-bottom: 110px;
+    }
+
+    .copyright {
+      margin-top: 100px;
+    }
+  }
+}
+
+// * ----- font style -----
+
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$height: 400px;
+$overlay: rgba(112, 112, 112, 0.9);
+
+$font-size-title: 1.5rem;
+$font-size-para: 1rem;
+
+.logo {
+  font-family: $font-title;
+  font-weight: 700;
+}
+
+li {
+  font-family: $font-desc;
+  opacity: 0.8;
+
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 1;
+    color: $color-accent-pink;
+  }
+}
+
+.copyright {
+  font-family: $font-desc;
+  font-size: $font-size-para * 0.6;
+  opacity: 0.5;
+}

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="content">
+    <h4 class="title">Subscribe</h4>
+    <p class="desc">Be first to find out what is new</p>
+    <form class="sub">
+      <input
+        type="email"
+        placeholder="Your Email Address"
+        [(ngModel)]="email"
+        name="email"
+      />
+      <button type="submit" [routerLink]="['/not-implemented']">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</div>

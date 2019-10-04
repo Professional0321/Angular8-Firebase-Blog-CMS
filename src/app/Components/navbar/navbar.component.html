@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="content">
+    <div class="logo"><a [routerLink]="['/']">Wanderer</a></div>
+    <ul>
+      <li (click)="publish()" *ngIf="isAuthenticated && shouldEnablePublish">
+        <a>Publish</a>
+      </li>
+      <li (click)="signup()" *ngIf="!isAuthenticated"><a>Signup</a></li>
+      <li (click)="login()" *ngIf="!isAuthenticated"><a>Login</a></li>
+
+      <li *ngIf="isAuthenticated">
+        <a [routerLink]="['/account']">Account</a>
+      </li>
+
+      <li *ngIf="isAuthenticated && !shouldHideCreate">
+        <a [routerLink]="['/create']" [ngClass]="{ special: true }">Create</a>
+      </li>
+      <li (click)="logout()" *ngIf="isAuthenticated"><a>Logout</a></li>
+    </ul>
+  </div>
+</div>
+<app-signup-form
+  *ngIf="showSignup"
+  (dismiss)="showModal($event)"
+></app-signup-form>
+
+<app-login-form
+  *ngIf="showLogin"
+  (dismiss)="showModal($event)"
+></app-login-form>

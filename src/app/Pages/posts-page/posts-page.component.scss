@@ -1,0 +1,38 @@
+// * ----- Layout -----
+.container {
+  min-height: 100vh;
+}
+
+// * ----- Listview -----
+
+.articles {
+  margin-top: 100px;
+
+  padding-bottom: 180px;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    .articles {
+      width: 98%;
+      margin: 0 auto;
+      app-listview-item {
+        width: 95%;
+        min-width: 780px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container {
+    .articles {
+      width: 98%;
+      margin: 0 auto;
+      app-listview-item {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

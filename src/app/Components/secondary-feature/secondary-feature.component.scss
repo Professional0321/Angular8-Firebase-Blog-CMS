@@ -1,0 +1,76 @@
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$color-to-blend: rgba(0, 0, 0, 0.3);
+$color-to-blend-brighten: rgba(0, 0, 0, 0);
+
+$font-size-title: 1.5rem;
+$font-size-para: 1rem;
+
+.container {
+  width: 100%;
+  color: white;
+
+  .content {
+    // background-image: url("../../../assets/pat-kay-C69YOsY9lYg.jpg");
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    padding: 100px;
+
+    .text {
+      text-align: center;
+      opacity: 0.9;
+
+      .title {
+        font-family: $font-title;
+        font-size: $font-size-title * 1.3;
+        font-weight: 400;
+        margin-bottom: 60px;
+      }
+
+      .desc {
+        font-family: $font-para;
+        text-transform: uppercase;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      button {
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+        padding: 18px 52px;
+        border-radius: 5px;
+        margin-top: 40px;
+        font-family: $font-para;
+        font-size: $font-size-para;
+
+        text-transform: uppercase;
+        &:hover {
+          background-color: white;
+          color: $color-primary-dark;
+          cursor: pointer;
+        }
+
+        &:active {
+          filter: brightness(70%);
+        }
+      }
+    }
+  }
+}

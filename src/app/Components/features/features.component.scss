@@ -1,0 +1,141 @@
+$height-container: 635px;
+$darken: 75%;
+
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$color-to-blend: rgba(0, 0, 0, 0.3);
+$color-to-blend-brighten: rgba(0, 0, 0, 0);
+
+$font-size-title: 1.5rem;
+$font-size-para: 1rem;
+
+.container {
+  max-width: 1600px;
+
+  width: 80%;
+  margin: 0 auto;
+
+  min-width: 1280px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  .content {
+    height: 635px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 12px 1fr;
+    grid-template-rows: 1fr 12px 1fr;
+    margin: 0 auto;
+  }
+
+  div {
+    height: $height-container;
+    border-radius: 3px;
+
+    .main,
+    .top,
+    .bottom {
+      background-color: $color-to-blend;
+      background-blend-mode: darken;
+      transition: ease-in-out 0.35s;
+      position: relative;
+
+      &:hover {
+        background-color: $color-to-blend-brighten;
+        transition: ease-in-out 0.35s;
+        cursor: pointer;
+      }
+    }
+
+    .main {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+      // background-image: url("../../../assets/alexander-slash-reYDl88Nah0.jpg");
+      background-size: cover;
+
+      .post-detail {
+        // border: 1px solid blue;
+        height: auto;
+        color: white;
+        width: 85%;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 65px;
+        padding-left: 60px;
+
+        .title {
+          font-family: $font-title;
+          font-weight: 400;
+          font-size: $font-size-title;
+        }
+
+        .desc {
+          font-family: $font-para;
+          text-transform: uppercase;
+          font-size: $font-size-para * 0.8;
+          margin-top: 30px;
+          padding-left: 2px;
+        }
+      }
+    }
+
+    .secondary {
+      grid-column-start: 4;
+      height: 310px;
+
+      .post-detail {
+        // border: 1px solid crimson;
+        color: white;
+        width: 80%;
+        position: absolute;
+        height: auto;
+        padding-left: 35px;
+        padding-bottom: 30px;
+        bottom: 0;
+
+        .title {
+          font-family: $font-title;
+          font-weight: 400;
+          font-size: $font-size-title * 0.9;
+        }
+
+        .desc {
+          font-family: $font-para;
+          text-transform: uppercase;
+          font-size: $font-size-para * 0.8;
+          margin-top: 18px;
+          padding-left: 2px;
+        }
+      }
+    }
+
+    .top {
+      grid-row-end: 2;
+      // background-image: url("../../../assets/max-lawton-ZJSe0tL8ZWk.jpg");
+      background-size: cover;
+    }
+
+    .bottom {
+      grid-row-start: 3;
+      // background-image: url("../../../assets/qingbao-meng-01_igFr7hd4.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1286px) {
+  .container {
+    width: 90%;
+    min-width: 680px;
+  }
+}

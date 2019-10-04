@@ -1,0 +1,9 @@
+<div *ngIf="!isLoading">
+  <app-navbar></app-navbar>
+
+  <app-features [posts]="postsOne"></app-features>
+  <app-latest-posts [posts]="postsTwo"></app-latest-posts>
+  <app-secondary-feature [posts]="postsThree"></app-secondary-feature>
+  <app-subscribe></app-subscribe>
+  <app-footer-section></app-footer-section>
+</div>

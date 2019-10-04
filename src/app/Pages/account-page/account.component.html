@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="content">
+    <div class="header">
+      <div class="box" *ngIf="currentUser">
+        <p>You have logged in as</p>
+        <p>{{ currentUser?.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="articles">
+    <app-listview-item
+      *ngFor="let item of posts"
+      [post]="item"
+    ></app-listview-item>
+  </div>
+</div>
+<app-footer-section></app-footer-section>

@@ -1,0 +1,83 @@
+// * ----- Basic Layout -----
+
+.container {
+  .content {
+    min-height: 100vh;
+
+    .image {
+      width: 100%;
+      height: auto;
+      // border: 1px solid blue;
+      height: 600px;
+      // background-image: url("../../../assets/samuel-zeller-9RqA6tnT0gA.jpg");
+      background-size: cover;
+
+      background-position-y: 50%;
+      background-position-x: 50%;
+    }
+
+    .body {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 100px;
+      margin-bottom: 200px;
+
+      max-width: 850px;
+
+      .header .title {
+        margin-bottom: 30px;
+      }
+
+      .header {
+        margin-bottom: 80px;
+
+        p {
+          text-transform: uppercase;
+        }
+      }
+
+      .text {
+        margin-top: 50px;
+
+        margin: 0 auto;
+
+        p {
+          margin-top: 30px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+
+// * ----- Font Style -----
+
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$height: 400px;
+$overlay: rgba(112, 112, 112, 0.9);
+
+$font-size-title: 1.5rem;
+$font-size-para: 1rem;
+
+.header .title {
+  font-family: $font-title;
+  font-size: $font-size-title;
+}
+
+.text p {
+  font-family: $font-para;
+  font-size: $font-size-para;
+}
+
+.content {
+  color: $color-text-dark;
+}

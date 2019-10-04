@@ -1,0 +1,111 @@
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$font-size-title: 1.5rem;
+$font-size-para: 1rem;
+
+// * ----- basic layout -----
+.container {
+  min-height: 100vh;
+
+  .content {
+    margin: 0 auto;
+
+    height: 100vh;
+
+    .image {
+      background-color: $color-text-lightgray;
+      height: 500px;
+      background-size: cover;
+      background-position-y: 50%;
+      background-position-x: 50%;
+      background-image: "";
+
+      display: flex;
+      justify-content: center;
+
+      color: white;
+      font-family: $font-desc;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .text {
+      height: 100vh;
+      width: 80%;
+      margin: 0 auto;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 100px;
+
+        input {
+          width: 100%;
+        }
+
+        .category {
+          max-width: 200px;
+        }
+
+        textarea {
+          resize: none;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// * ----- font & text -----
+
+// * ----- Button style  &  Input style-----
+
+@mixin inputStyle {
+  padding: 13px 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  min-width: 320px;
+  // max-width: 400px;
+  font-family: $font-desc;
+}
+
+.text form {
+  input {
+    @include inputStyle();
+  }
+
+  .title {
+    font-family: $font-title;
+    font-size: $font-size-title;
+  }
+
+  .category {
+    margin-top: 10px;
+    font-family: $font-desc;
+    text-transform: uppercase;
+  }
+
+  textarea {
+    margin-top: 20px;
+    border-color: transparent;
+    font-family: $font-para;
+    font-size: $font-size-para * 1.2;
+  }
+}

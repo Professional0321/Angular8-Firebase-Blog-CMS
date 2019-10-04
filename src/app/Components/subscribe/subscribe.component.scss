@@ -1,0 +1,107 @@
+// * ----- Layout -----
+.container {
+  width: 100%;
+  height: 365px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    // border: 1px solid blue;
+    height: 75%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .desc {
+    margin-top: 10px;
+  }
+}
+
+// * ----- Variables -----
+
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+$height: 400px;
+$overlay: rgba(112, 112, 112, 0.9);
+
+$font-size-title: 1.5rem;
+$font-size-para: 1rem;
+
+// * ----- New Variables -----
+
+$color-bg-lightgray: #f7f7f7;
+
+// * ----- Color -----
+.container {
+  background-color: $color-bg-lightgray;
+  color: $color-text-dark;
+}
+
+// * ----- Font -----
+
+.title {
+  font-family: $font-title;
+  font-size: $font-size-title;
+}
+
+.desc {
+  font-family: $font-para;
+  font-size: $font-size-para * 0.8;
+}
+
+// * ----- Button style  &  Input style-----
+@mixin buttonStyle {
+  padding: 13px 40px;
+  border-radius: 3px;
+  background-color: $color-accent-pink;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  font-family: $font-para;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+  }
+}
+
+@mixin inputStyle {
+  padding: 13px 20px;
+  border: 1px solid $color-text-lightgray;
+  border-radius: 3px;
+  min-width: 320px;
+  max-width: 400px;
+  font-family: $font-desc;
+
+  &:focus {
+    border-color: $color-accent-pink;
+  }
+}
+
+button {
+  @include buttonStyle();
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+input {
+  @include inputStyle();
+}
+
+form {
+  margin-top: 40px;
+  opacity: 0.9;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="content" #image>
+    <div class="text">
+      <h4 class="title">{{ posts[0]?.title }}</h4>
+      <p class="desc">
+        <span>{{ posts[0]?.category }}</span> /
+        {{ formateDate(posts[0].date._seconds) }}
+      </p>
+      <button (click)="onClick($event)">Learn More</button>
+    </div>
+  </div>
+</div>

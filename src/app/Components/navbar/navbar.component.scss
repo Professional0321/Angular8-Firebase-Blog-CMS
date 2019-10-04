@@ -1,0 +1,66 @@
+$font-title: "Montserrat", sans-serif;
+$font-desc: "Lato", sans-serif;
+$font-para: "Source Serif Pro", serif;
+
+$color-primary-dark: #1a1a1a;
+$color-accent-pink: #f9807f;
+
+$color-text-lightgray: #707070;
+$color-text-dark: #404040;
+
+.container {
+  background-color: $color-primary-dark;
+  color: white;
+
+  font-family: $font-para;
+
+  .content {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    min-width: 500px;
+    margin: 0 auto;
+
+    .logo {
+      margin-left: 50px;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        &:visited {
+          color: white;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 60px;
+        cursor: pointer;
+
+        text-decoration: none;
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:visited {
+            color: white;
+          }
+        }
+
+        a:hover {
+          color: $color-accent-pink;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
