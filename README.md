@@ -1,35 +1,23 @@
+# BlogCMS - Portfolio Piece
+
+[Visit the live site ](https://blogcms-8cd5c.firebaseapp.com/)
+
+This project is built with Angular for a Responsive frontend, Firebase Cloud Function plus Express.js as backend to provide custom Api calls to interact with Firebase Firestore and its Authentication service.
+
 <a href="https://blogcms-8cd5c.firebaseapp.com/">
 <img src='/snapshot.jpg'>
 </a>
 
-# BlogCMS
+## Things that I have done in this project
 
-[Visit the live site ](https://blogcms-8cd5c.firebaseapp.com/)
-
-This project is built with Angular for frontend, Firebase Cloud Function & Express.js as backend to provide custom Api to interact with Firebase Firestore and Authentication service.
-
-![Snapshot of the site](/snapshot.jpg)
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Building different individual components with HTML & SASS
+- Then composing them into pages
+- Using Angular routing to navigate the pages
+- Creating and injecting different Services for Database interaction, Authentication or Subscription
+- Using multiple techniques to achieve communication between components, such as EventEmitter, Service, Subscription
+- Building RESTful API from scratch using firebase cloud function & Express.js
+- Consuming [Unsplash]('https://unsplash.com/') API to get random pictures
+- Using service worker to cache files & images
+- Writing custom class to structure data and pass data around
+- Reflecting different authentication state in UI and providing relevant functionalities
+- Using Angular Cli to quickly generate files to work with

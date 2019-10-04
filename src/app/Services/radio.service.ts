@@ -9,7 +9,6 @@ export class RadioService {
   private shoudEnablePublish = new BehaviorSubject<boolean>(false);
   private create = new BehaviorSubject<boolean>(false);
   private post = new BehaviorSubject<Post>(null);
-  private idOfPostToRemove = new BehaviorSubject<string>("");
   constructor() {}
 
   shouldEnablePublish() {
